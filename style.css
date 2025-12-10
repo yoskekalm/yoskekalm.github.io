@@ -216,48 +216,6 @@ h3 {
   padding-left: 1.2rem;
 }
 
-/* ---------- Teaching section styles ---------- */
-
-.teaching-section {
-  margin-top: 1.5rem;
-}
-
-.course {
-  margin-bottom: 1.8rem;
-}
-
-.course-meta {
-  margin: 0.2rem 0 0.4rem;
-  color: #555;
-  font-size: 0.95rem;
-}
-
-.course-links {
-  margin: 0.5rem 0 0;
-}
-
-.course-links a {
-  margin-right: 0.4rem;
-}
-
-.past-courses {
-  list-style: disc;
-  padding-left: 1.2rem;
-}
-
-/* ---------- Other / News ---------- */
-
-.news-list {
-  list-style: disc;
-  padding-left: 1.2rem;
-}
-
-/* ---------- Contact / misc (if reused) ---------- */
-
-.contact-block {
-  margin-bottom: 1.5rem;
-}
-
 /* ---------- Footer ---------- */
 
 .site-footer {
