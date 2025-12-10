@@ -226,7 +226,7 @@ h3 {
 }
 
 .site-footnote {
-  font-size: 0.75rem;
+  font-size: 0.5rem;
   color: #444;
   text-align: justify;          /* ← justified text */
   max-width: 900px;             /* keeps lines readable */
