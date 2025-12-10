@@ -218,10 +218,17 @@ h3 {
 
 /* ---------- Footer ---------- */
 
+.footnote-divider {
+  border: none;
+  border-top: 1px solid #ddd;   /* soft gray line */
+  width: 90%;
+  margin: 3rem auto 1.5rem;
+}
+
 .site-footnote {
   font-size: 0.75rem;          /* tiny text */
-  color: #555;                 /* subtle gray */
-  text-align: center;          /* center the note */
+  color: #444; 
+  text-align: justify; 
   margin-top: 4rem;            /* space above the note */
   margin-bottom: 2rem;         /* padding from bottom */
   line-height: 1.4;            /* readable spacing */
