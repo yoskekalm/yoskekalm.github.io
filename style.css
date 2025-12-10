@@ -226,12 +226,12 @@ h3 {
 }
 
 .site-footnote {
-  font-size: 0.75rem;          /* tiny text */
-  color: #444; 
-  text-align: justify; 
-  margin-top: 4rem;            /* space above the note */
-  margin-bottom: 2rem;         /* padding from bottom */
-  line-height: 1.4;            /* readable spacing */
+  font-size: 0.75rem;
+  color: #444;
+  text-align: justify;          /* ← justified text */
+  max-width: 900px;             /* keeps lines readable */
+  margin: 0 auto 3rem;          /* center the block, spacing below */
+  line-height: 1.4;
 }
 
 /* ---------- Responsive adjustments ---------- */
