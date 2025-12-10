@@ -218,12 +218,13 @@ h3 {
 
 /* ---------- Footer ---------- */
 
-.site-footer {
-  border-top: 1px solid #eee;
-  padding: 1rem 2.5rem;
-  text-align: center;
-  font-size: 0.5rem;
-  color: #777;
+.site-footnote {
+  font-size: 0.75rem;          /* tiny text */
+  color: #555;                 /* subtle gray */
+  text-align: center;          /* center the note */
+  margin-top: 4rem;            /* space above the note */
+  margin-bottom: 2rem;         /* padding from bottom */
+  line-height: 1.4;            /* readable spacing */
 }
 
 /* ---------- Responsive adjustments ---------- */
