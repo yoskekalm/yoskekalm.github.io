@@ -37,6 +37,7 @@ a:hover {
 
 .section-block {
   margin-top: 3rem;
+  scroll-margin-top: 90px; /* match header height */
   margin-bottom: 3rem;
   text-align: justify;        /* center text under photo */
 
@@ -57,6 +58,17 @@ a:hover {
   background-color: #065c95; 
   margin-bottom: 1.5rem;
 } 
+
+.opening-box {
+  max-width: 900px;
+  margin: 1.2em auto 2em auto;
+  padding: 1.1em 1.3em;
+  background-color: #f6f7f8;
+  border: 4px solid #3a6ea5;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
 
 /* ---------- Site header & navigation ---------- */
 .site-header {
@@ -121,24 +133,12 @@ h3 {
 }
 
 /* ---------- "About me" section (photo + bio) ---------- */
-
-.intro {
-  display: flex;
-  gap: 2.5rem;
-  align-items: flex-start;   /* ← forces equal-height columns */
-  margin-bottom: 2.5rem;
-}
-
-/* LEFT COLUMN: photo + name + title */
-.intro-left {
-  flex: 0 0 480px; 
-  text-align: center; 
-}
-
 /* photo */
 .intro-photo-img {
   width: 100%;
-  border-radius: 4px;
+  max-width: 500px;   /* adjust if you want it larger/smaller */
+  height: auto;       /* THIS is the key line */
+  display: block;
 }
 
 /* RIGHT COLUMN: bio text */
@@ -147,6 +147,13 @@ h3 {
   font-size: 1rem;
   text-align: justify;
 }
+
+/* Make the intro photo behave nicely inside the summary-two-col system */
+.intro-two-col .intro-left{
+  display: flex;
+  justify-content: center;
+}
+
 
 /* ---------- Two-column summary (Interests & Education) ---------- */
 
@@ -216,22 +223,56 @@ h3 {
   padding-left: 1.2rem;
 }
 
-/* ---------- Footer ---------- */
+/* ---------- Teaching section styles ---------- */
 
-.footnote-divider {
-  border: none;
-  border-top: 1px solid #ddd;   /* soft gray line */
-  width: 90%;
-  margin: 3rem auto 1.5rem;
+.teaching-section {
+  margin-top: 1.5rem;
 }
 
-.site-footnote {
-  font-size: 0.5rem;
-  color: #444;
-  text-align: justify;          /* ← justified text */
-  max-width: 900px;             /* keeps lines readable */
-  margin: 0 auto 3rem;          /* center the block, spacing below */
-  line-height: 1.4;
+.course {
+  margin-bottom: 1.8rem;
+}
+
+.course-meta {
+  margin: 0.2rem 0 0.4rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.course-links {
+  margin: 0.5rem 0 0;
+}
+
+.course-links a {
+  margin-right: 0.4rem;
+}
+
+.past-courses {
+  list-style: disc;
+  padding-left: 1.2rem;
+}
+
+/* ---------- Other / News ---------- */
+
+.news-list {
+  list-style: disc;
+  padding-left: 1.2rem;
+}
+
+/* ---------- Contact / misc (if reused) ---------- */
+
+.contact-block {
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  border-top: 1px solid #eee;
+  padding: 1rem 2.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
 }
 
 /* ---------- Responsive adjustments ---------- */
