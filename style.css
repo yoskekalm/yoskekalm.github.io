@@ -292,3 +292,19 @@ h3 {
     margin-right: 0.9rem;
   }
 }
+
+.site-footnote {
+  font-size: 0.4rem;      /* very small but readable */
+  opacity: 0.85;
+  line-height: 1.3;
+  color: #666;
+  max-width: 900px;
+  margin: 0 auto 2rem auto;
+}
+
+.section-note {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 0.5rem;
+  margin-bottom: 1.2rem;
+}
