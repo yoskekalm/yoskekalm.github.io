@@ -3,10 +3,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Joseph Kalmenovitz</title>
+  <title>Joseph Kalmenovitz | Economics of Regulation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Joseph Kalmenovitz, Assistant Professor of Finance at the Simon Business School, University of Rochester. Research on the economics of regulation, with public datasets on regulatory intensity, fragmentation and similarity.">
+  <meta name="author" content="Joseph Kalmenovitz">
+
+  <!-- How the page looks when someone shares the link (Twitter/X, LinkedIn, Slack, iMessage). -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Joseph Kalmenovitz | Economics of Regulation">
+  <meta property="og:description" content="Research on the economics of regulation, and public datasets on regulatory intensity, fragmentation and similarity.">
+  <meta property="og:image" content="https://www.jkalmenovitz.com/files/headshot.jpg">
+  <meta property="og:url" content="https://www.jkalmenovitz.com/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Tab icon: a "JK" monogram drawn inline, so there is no extra file to host. -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23065c95'/%3E%3Ctext x='32' y='44' font-family='Helvetica,Arial,sans-serif' font-size='34' font-weight='bold' fill='white' text-anchor='middle'%3EJK%3C/text%3E%3C/svg%3E">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
 </head>
 
 <body>
@@ -33,7 +47,7 @@
 <section class="summary-two-col intro-two-col">
 
   <!-- LEFT COLUMN: photo -->
-  <div >
+  <div class="intro-photo">
     <img src="files/headshot.jpg"
          alt="Photo of Joseph Kalmenovitz"
          class="intro-photo-img">
@@ -54,6 +68,13 @@
 
 </section>
 
+<!-- Announcement: the extended RegIn release. Uses the .opening-box layout with the site's
+     header cream and divider blue so it reads as a notice rather than as body text.
+     Sits directly under the bio, at full page width. -->
+<div class="opening-box announce-box">
+  <strong>New (August 2026): </strong> The Regulatory Intensity (<i>RegIn</i>) data has been extended to 2025 and expanded significantly. The posted datasets now include various measures of regulatory intensity at the firm, industry, and agency level -- each at annual, quarterly, and monthly frequency; as well as a time-series measure at annual, quarterly, monthly, and daily frequency. See the <a href="#datasets">Datasets</a> section. 
+</div>
+
 
     <p class="profile-links">
   <strong>Profiles: </strong>
@@ -64,7 +85,8 @@
       <a href="https://drive.google.com/file/d/1s2YEUymxeJKr4366lu2DwaezpikQw9qT/view?usp=drive_link"
          target="_blank" rel="noopener noreferrer">CV</a>
     </p>
-  <strong>Contact: </strong> <u>jkalmeno@simon.rochester.edu</u>
+  <p class="contact-line"><strong>Contact: </strong>
+    <a href="mailto:jkalmeno@simon.rochester.edu">jkalmeno@simon.rochester.edu</a></p>
 
     <div class="summary-two-col">
       <div class="summary-col">
@@ -72,7 +94,7 @@
         <ul>
           <li>Economics of Regulation</li>
           <li>Law and Economics</li>
-          <li>Labor & Finance </li>
+          <li>Labor &amp; Finance</li>
           <li>Corporate Governance</li>
         </ul>
       </div>
@@ -104,21 +126,21 @@
       <p class="regulation-caption">
         The figure below tracks the burden of federal paperwork requirements over time, <strong><u>updated through June 30, 2026</u></strong>. I have developed the two complementary indexes in <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3451344" target="_blank" rel="noopener noreferrer"><strong>Regulatory Intensity and Firm-Specific Exposure (RFS 2023)</strong></a>. The blue line captures the cumulative number of regulatory mandates (“How many rules?”), while the red line reflects the total estimated compliance time in hours (“How many hours does it take to comply?”). Labels indicate presidential administrations. Both series are normalized, so the levels should be interpreted in relative rather than absolute terms. 
       </p>
-      <img src="files/RegIn all.png" alt="Illustration related to regulation research" class="regulation-img">
+      <img src="files/RegIn all.png" alt="Regulatory intensity index, 1993 to 2026: number of paperwork mandates and total compliance hours, by presidential administration" class="regulation-img" loading="lazy">
     </div>
 
     <div class="regulation-figure">
       <p class="regulation-caption">
 The figure below tracks all regulatory activities by all federal agencies based on Federal Register records, <strong><u>updated through June 30, 2026</u></strong>. The underlying Federal Register data are used extensively in <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3730721" target="_blank" rel="noopener noreferrer"><strong>Regulatory Similarity (JLE 2024)</strong></a> and <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3802888" target="_blank" rel="noopener noreferrer"><strong>Regulatory Fragmentation (JF 2025)</strong></a>. The blue line (left axis) reflects the number of documents, and the red dashed line (right axis) reflects the number of words. The labeled black markers highlight months affected by federal government shutdowns, which coincide with sharp but temporary declines in publication activity. Both series are normalized, so the levels should be interpreted in relative rather than absolute terms. 
       </p>
-      <img src="files/Federal Register all.png" alt="Illustration related to regulation research" class="regulation-img">
+      <img src="files/Federal Register all.png" alt="Federal Register publication activity: number of documents and number of words per month, with government shutdowns marked" class="regulation-img" loading="lazy">
     </div>
 
       <div class="regulation-figure">
       <p class="regulation-caption">        
         The figure below tracks the volume of regulations under development by federal agencies, <strong><u>updated through March 31, 2025</u></strong>. The indexes are presented in <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4360231"   target="_blank" rel="noopener noreferrer"><strong>Follow the Pipeline (2023)</strong></a>. The solid blue line reflects the total rulemaking activity across all agencies, while the dashed red line isolates financial regulations. Labels mark presidential administrations. 
       </p>
-      <img src="files/daily_pipeline.png" alt="Illustration related to regulation research" class="regulation-img">
+      <img src="files/daily_pipeline.png" alt="Volume of regulations under development: total rulemaking activity and financial regulations only, by presidential administration" class="regulation-img" loading="lazy">
     </div>
 
   </section>
@@ -128,6 +150,7 @@ The figure below tracks all regulatory activities by all federal agencies based 
     <section id="datasets" class="section-block">
       <h1 class="section-title">Datasets</h1>
       <div class="section-divider"></div>
+
 <div class="opening-box">
   The following datasets are available for <strong>non-commercial research use only</strong>. Please feel free to reach out
         if you have questions, encounter any issues, or are interested in potential
@@ -144,13 +167,15 @@ The figure below tracks all regulatory activities by all federal agencies based 
         <li>
           <a href="https://drive.google.com/file/d/1tTUGOSOfY2d571yeM_j7OAzgGIAsLdaV/view?usp=share_link" target="_blank" rel="noopener noreferrer">
             <strong>Regulatory Similarity</strong>
-          </a>: firm-to-firm data on regulatory similarity (intuitively: how similar is the regulatory requirements of two firms).
+          </a>: firm-to-firm data on regulatory similarity (intuitively: how similar are the regulatory requirements of two firms).
         </li>
 
-        <li>
+        <li id="regin">
           <a href="https://drive.google.com/file/d/17IK78reybdhcGrNTIPZR5p-8GRTcTgKX/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <strong>Regulatory Intensity and Firm-Specific Exposure</strong>
           </a>: firm-level data on regulatory intensity (intuitively: how much does the firm pay to comply with federal regulations).
+          <br><span class="dataset-new"><strong>Updated August 2026:</strong> extended through 2025, and now including
+          industry-level, economy-wide and agency-level files.</span>
         </li>
         <li>
           <a href="https://drive.google.com/file/d/1ePDnLDC21c7il_BxtUCXAEIyAOQRULou/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
@@ -172,8 +197,6 @@ The figure below tracks all regulatory activities by all federal agencies based 
         </li>
 
       </ol>
-
-      </div>
     </section>
 
       <!-- PAPERS SECTION ------------------------------------------------------>
@@ -218,7 +241,7 @@ The figure below tracks all regulatory activities by all federal agencies based 
             <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3802888" target="_blank" rel="noopener noreferrer">Paper</a> ·
             <a href="https://www.dropbox.com/s/mw23g61s2p9xhjs/companyyear_measures.csv?dl=0" target="_blank" rel="noopener noreferrer">Data</a> ·
             <a href="https://drive.google.com/file/d/1BqvM9kzZi9xEbZo0UNXK4hfFo0UGNXWk/view?usp=sharing" target="_blank" rel="noopener noreferrer">Slides</a> ·
-            <a href="https://afajof.org/prizes/#battlegroupprizewinners" target="_blank" rel="noopener noreferrer">Brattle Group Award </a> ·
+            <a href="https://afajof.org/prizes/#battlegroupprizewinners" target="_blank" rel="noopener noreferrer">Brattle Group Award</a> ·
             <a href="https://www.fmarc.eu/2023/10/03/fmarc-2023-best-papers-awards/" target="_blank" rel="noopener noreferrer">Best Paper Award (FMARC)</a> ·
             <a href="https://apjfs.org/55" target="_blank" rel="noopener noreferrer">Best Paper Award (Korean Securities Association)</a> ·
             <a href="https://sites.duke.edu/thefinregblog/2021/05/21/the-government-agenda-and-the-effects-of-regulatory-dispersion/" target="_blank" rel="noopener noreferrer">FinReg Blog</a>
@@ -241,7 +264,7 @@ The figure below tracks all regulatory activities by all federal agencies based 
             <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3451344" target="_blank" rel="noopener noreferrer">Paper</a> ·
             <a href="https://drive.google.com/file/d/17IK78reybdhcGrNTIPZR5p-8GRTcTgKX/view?usp=sharing" target="_blank" rel="noopener noreferrer">Data</a> ·
             <a href="https://drive.google.com/file/d/1tpLtHXgO1QBT4WOItO8jrLd_2oGWge_6/view?usp=sharing" target="_blank" rel="noopener noreferrer">Slides</a> · 
-            <a href="https://www.bloomberg.com/news/features/2025-08-07/financial-regulations-add-51-million-work-hours-annually-since-2008-crisis" target="_blank" rel="noopener noreferrer">Bloomberg News</a>            ·
+            <a href="https://www.bloomberg.com/news/features/2025-08-07/financial-regulations-add-51-million-work-hours-annually-since-2008-crisis" target="_blank" rel="noopener noreferrer">Bloomberg News</a> ·
             <a href="https://corpgov.law.harvard.edu/2023/09/27/regulatory-intensity-and-firm-specific-exposure/" target="_blank" rel="noopener noreferrer">Harvard Law School</a>
           </p>
           </li>
@@ -355,7 +378,7 @@ The figure below tracks all regulatory activities by all federal agencies based 
     <!-- PRESENTATIONS SECTION ---------------------------------------------------->
     <section id="presentations" class="section-block">
       <!-- <h1 class="section-title">Presentations & Discussions </h1> -->
-      <h1 class="section-title">Presentations </h1>
+      <h1 class="section-title">Presentations</h1>
       <div class="section-divider"></div>
       <!-- <h2><u>Presentations:</u></h2> -->
 <p class="section-note">
@@ -382,7 +405,7 @@ Northern Finance Association (NFA) (X2); Politics in Finance; American Finance A
 
     <!-- OTHER STUFFS SECTION ------------------------------------------------------>
     <section id="other" class="section-block">
-      <h1 class="section-title">Misc </h1>
+      <h1 class="section-title">Misc</h1>
       <div class="section-divider"></div>
 <div class="opening-box">
     Below are some of my non-research writings and presentations. They are intended for broader audiences and reflect work presented in practitioner, policy, and educational settings.
@@ -404,6 +427,8 @@ Northern Finance Association (NFA) (X2); Politics in Finance; American Finance A
 
 
   
+  </main>
+
     <!-- FOOTNOTE ------------------------------------------------------>
 <hr class="footnote-divider">
 <footer class="site-footnote">
@@ -411,3 +436,6 @@ Northern Finance Association (NFA) (X2); Politics in Finance; American Finance A
   and my last name Kalmenoviz, Kalmenovitch, Kalmanovitz, Kalmanoviz, or Kalmanovitch. 
   In Hebrew, it is spelled יוסף קלמנוביץ.
 </footer>
+
+</body>
+</html>
