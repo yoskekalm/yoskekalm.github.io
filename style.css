@@ -1,3 +1,21 @@
+/* ============================================================================
+   Joseph Kalmenovitz - site styles
+   style2.css : a tidied version of style.css. Same look; the changes are
+     - dead rules removed (.site-footer, .teaching-*, .course*, .wip-list,
+       .news-list, .past-courses, .contact-block, .paper-section - none of them
+       appear in the HTML any more)
+     - .section-header no longer sets margin-bottom and font-size twice
+     - images capped at the page width globally, so a large PNG can never
+       force sideways scrolling
+     - .announce-box and .dataset-new added, so the announcement styling lives
+       here rather than inline in the HTML
+     - the footnote is 0.7rem instead of 0.4rem (8px is below what most
+       browsers will render legibly)
+     - a keyboard focus ring, and a mobile block that unpins the header,
+       tightens the nav and stops justifying text on narrow screens
+     - a small print stylesheet
+   ============================================================================ */
+
 /* ---------- Global layout & typography ---------- */
 
 * {
@@ -13,13 +31,19 @@ body {
   padding: 0;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 20px;          /* increase base font size here */
-  line-height: 1.5; 
+  line-height: 1.5;
   color: #222;
   background-color: #ffffff;
 }
 
+/* No image can be wider than its column. */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 li {
-  margin-bottom: 0.6rem;   /* adjust spacing as you like */
+  margin-bottom: 0.6rem;
 }
 
 a {
@@ -32,32 +56,34 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Visible target for keyboard users, invisible to mouse users. */
+a:focus-visible {
+  outline: 2px solid #065c95;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
 
-/* ---------- Section blocks (About me, Regulation, Research, Teaching, Other) ---------- */
+/* ---------- Section blocks ---------- */
 
 .section-block {
   margin-top: 3rem;
-  scroll-margin-top: 90px; /* match header height */
+  scroll-margin-top: 90px;   /* match header height */
   margin-bottom: 3rem;
-  text-align: justify;        /* center text under photo */
-
+  text-align: justify;
 }
 
 .section-header {
-  margin-bottom: 1.5rem;
-  font-size: 1.6rem;
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.5rem;
   font-size: 1.6rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
 }
 
 .section-divider {
   height: 5px;
   width: 100%;
-  background-color: #065c95; 
+  background-color: #065c95;
   margin-bottom: 1.5rem;
-} 
+}
 
 .opening-box {
   max-width: 900px;
@@ -70,11 +96,36 @@ a:hover {
   color: #333;
 }
 
+/* The "what's new" box: same shape as .opening-box, in the header cream and
+   the divider blue, so it reads as an announcement rather than as body text. */
+.announce-box {
+  background-color: #f7efe5;
+  border-color: #065c95;
+}
+
+/* The one-line "Updated ..." note under a dataset entry. Inline-block so the
+   tint sizes to the text and the bullet above it stays aligned with its
+   neighbours. */
+.dataset-new {
+  display: inline-block;
+  background-color: #f7efe5;
+  border-left: 4px solid #065c95;
+  padding: 0.35em 0.7em;
+  margin: 0.4em 0 0 0;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.dataset-new strong {
+  color: #065c95;
+}
+
 /* ---------- Site header & navigation ---------- */
+
 .site-header {
-  position: sticky;     /* keep header visible while scrolling */
+  position: sticky;
   top: 0;
-  z-index: 1000;        /* stay above page content */
+  z-index: 1000;
   background-color: #f7efe5;
   display: flex;
   justify-content: space-between;
@@ -89,10 +140,14 @@ a:hover {
   color: #1640a4;
 }
 
-/* make each nav item look like a button */
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .site-nav a {
   display: inline-block;
-  margin-left: 0.8rem;
   padding: 0.35rem 0.9rem;
   border-radius: 4px;
   border: 1px solid #1640a4;
@@ -102,18 +157,18 @@ a:hover {
   text-decoration: none;
 }
 
-/* hover effect for buttons */
 .site-nav a:hover {
   background-color: #1640a4;
   color: #ffffff;
-  text-decoration: none;   /* override global underline-on-hover */
+  text-decoration: none;
 }
 
 /* ---------- Main content container ---------- */
+
 .content {
-  max-width: 1200px;   /* wider main column */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2.5rem 2rem 3rem;  /* slightly more side padding */
+  padding: 2.5rem 2rem 3rem;
 }
 
 h1 {
@@ -132,28 +187,25 @@ h3 {
   margin-bottom: 0.3rem;
 }
 
-/* ---------- "About me" section (photo + bio) ---------- */
-/* photo */
+/* ---------- "About me" (photo + bio) ---------- */
+
 .intro-photo-img {
   width: 100%;
-  max-width: 500px;   /* adjust if you want it larger/smaller */
-  height: auto;       /* THIS is the key line */
+  max-width: 500px;
+  height: auto;
   display: block;
 }
 
-/* RIGHT COLUMN: bio text */
 .intro-text {
   margin-top: -1rem;
   font-size: 1rem;
   text-align: justify;
 }
 
-/* Make the intro photo behave nicely inside the summary-two-col system */
-.intro-two-col .intro-left{
-  display: flex;
-  justify-content: center;
+.profile-links,
+.contact-line {
+  margin: 0.4rem 0;
 }
-
 
 /* ---------- Two-column summary (Interests & Education) ---------- */
 
@@ -163,8 +215,7 @@ h3 {
   gap: 1.6rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  /* flex-direction: column; */
-} 
+}
 
 .summary-col {
   flex: 1 1 300px;
@@ -187,7 +238,7 @@ h3 {
   line-height: 1.4;
 }
 
-/* ---------- Regulation section styles ---------- */
+/* ---------- Regulation Tracker figures ---------- */
 
 .regulation-figure {
   margin-top: 1.5rem;
@@ -206,105 +257,70 @@ h3 {
   text-align: justify;
 }
 
-/* ---------- Research section styles ---------- */
-
-.paper-section {
-  margin-top: 1.5rem;
-}
+/* ---------- Papers ---------- */
 
 .paper-links {
   margin: 0.2rem 0 0.4rem;
   font-size: 0.9rem;
-  margin-right: 0.4rem;
 }
 
-.wip-list {
-  list-style: disc;
-  padding-left: 1.2rem;
-}
-
-/* ---------- Teaching section styles ---------- */
-
-.teaching-section {
-  margin-top: 1.5rem;
-}
-
-.course {
-  margin-bottom: 1.8rem;
-}
-
-.course-meta {
-  margin: 0.2rem 0 0.4rem;
-  color: #555;
-  font-size: 0.95rem;
-}
-
-.course-links {
-  margin: 0.5rem 0 0;
-}
-
-.course-links a {
-  margin-right: 0.4rem;
-}
-
-.past-courses {
-  list-style: disc;
-  padding-left: 1.2rem;
-}
-
-/* ---------- Other / News ---------- */
-
-.news-list {
-  list-style: disc;
-  padding-left: 1.2rem;
-}
-
-/* ---------- Contact / misc (if reused) ---------- */
-
-.contact-block {
-  margin-bottom: 1.5rem;
-}
-
-/* ---------- Footer ---------- */
-
-.site-footer {
-  border-top: 1px solid #eee;
-  padding: 1rem 2.5rem;
-  text-align: center;
-  font-size: 0.85rem;
-  color: #777;
-}
-
-/* ---------- Responsive adjustments ---------- */
-
-@media (max-width: 720px) {
-  .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .site-nav {
-    margin-top: 0.5rem;
-  }
-
-  .site-nav a {
-    margin-left: 0;
-    margin-right: 0.9rem;
-  }
-}
-
-.site-footnote {
-  font-size: 0.4rem;      /* very small but readable */
-  opacity: 0.85;
-  line-height: 1.3;
-  color: #666;
-  max-width: 900px;
-  margin: 0 auto 2rem auto;
-}
+/* ---------- Small print ---------- */
 
 .section-note {
   font-size: 0.8rem;
   color: #555;
   margin-top: 0.5rem;
   margin-bottom: 1.2rem;
+}
+
+.footnote-divider {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 2rem auto 1rem;
+  max-width: 900px;
+}
+
+.site-footnote {
+  font-size: 0.7rem;       /* was 0.4rem, which is 8px and effectively unreadable */
+  opacity: 0.85;
+  line-height: 1.4;
+  color: #666;
+  max-width: 900px;
+  margin: 0 auto 2rem auto;
+}
+
+/* ---------- Responsive adjustments ---------- */
+
+@media (max-width: 720px) {
+  /* A sticky header eats a quarter of a phone screen once the nav wraps. */
+  .site-header {
+    position: static;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.2rem;
+  }
+
+  .site-nav {
+    margin-top: 0.5rem;
+  }
+
+  .content {
+    padding: 1.5rem 1.2rem 2rem;
+  }
+
+  /* Justified text on a narrow column opens rivers of white space. */
+  .section-block,
+  .intro-text,
+  .regulation-caption {
+    text-align: left;
+  }
+}
+
+/* ---------- Print ---------- */
+
+@media print {
+  .site-header { display: none; }
+  body { font-size: 11pt; }
+  a { color: #000; text-decoration: underline; }
+  .opening-box, .dataset-new { border-color: #999; background: none; }
 }
